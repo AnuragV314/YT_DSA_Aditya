@@ -1,0 +1,70 @@
+`PriorityQueue` is a class in Java that implements a priority queue based on a priority heap. It's a useful data structure for maintaining a set of elements with associated priorities. Here are some common operations you can perform with a `PriorityQueue`:
+
+1. **Insertion:**
+   - `offer(E e)`: Inserts the specified element into the priority queue.
+
+   ```java
+   PriorityQueue<Integer> pq = new PriorityQueue<>();
+   pq.offer(10);
+   pq.offer(5);
+   pq.offer(8);
+   ```
+
+2. **Deletion/Extraction:**
+   - `poll()`: Retrieves and removes the head of the priority queue.
+
+   ```java
+   int removedElement = pq.poll();
+   ```
+
+3. **Peeking:**
+   - `peek()`: Retrieves, but does not remove, the head of the priority queue.
+
+   ```java
+   int headElement = pq.peek();
+   ```
+
+4. **Size:**
+   - `size()`: Returns the number of elements in the priority queue.
+
+   ```java
+   int size = pq.size();
+   ```
+
+5. **Contains:**
+   - `contains(Object o)`: Returns true if the specified element is in the priority queue.
+
+   ```java
+   boolean containsElement = pq.contains(5);
+   ```
+
+6. **Iteration:**
+   - You can iterate over the elements in a priority queue using an iterator or by converting it to an array.
+
+   ```java
+   for (Integer element : pq) {
+       System.out.println(element);
+   }
+
+   Integer[] array = pq.toArray(new Integer[0]);
+   ```
+
+7. **Custom Comparator:** ((heap to max-heap ))
+   - You can create a priority queue with a custom comparator for ordering elements.
+
+   ```java
+   PriorityQueue<Integer> customPQ = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+   ```
+
+8. **Conversion:**
+   - You can convert a collection or another queue into a priority queue.
+
+   ```java
+   List<Integer> list = Arrays.asList(3, 1, 4, 1, 5, 9, 2);
+   PriorityQueue<Integer> convertedPQ = new PriorityQueue<>(list);
+   ```
+
+These are some of the basic operations you can perform with a `PriorityQueue` in Java. 
+Depending on your use case, you may find additional methods or variations of these operations useful.
+
+

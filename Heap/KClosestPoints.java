@@ -1,7 +1,6 @@
-
 /**
  * K Closest Points To Origin
- */
+*/
 
 import java.util.PriorityQueue;
 
@@ -16,6 +15,7 @@ class Point {
     public int getDis() {
         return x * x + y * y;
     }
+    
 }
 
 public class KClosestPoints {
